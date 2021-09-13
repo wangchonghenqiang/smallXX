@@ -1,0 +1,43 @@
+{
+  "name": "smallXX",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "doc:build": "umi-lib doc build",
+    "doc:dev": "umi-lib doc dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangchonghenqiang/smallXX.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangchonghenqiang/smallXX/issues"
+  },
+  "homepage": "https://github.com/wangchonghenqiang/smallXX#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-react": "^7.14.5",
+    "rollup": "^2.56.3",
+    "rollup-plugin-babel": "^4.4.0",
+    "@types/react": "^17.0.20",
+    "@types/react-dom": "^17.0.9",
+    "classnames": "^2.3.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+  } 
+}
