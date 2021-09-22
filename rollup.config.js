@@ -4,7 +4,7 @@ import {nodeResolve} from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import serve from 'rollup-plugin-serve';
-
+import livereload from 'rollup-plugin-livereload';
 const extensions = [
     '.js',
     '.ts',
@@ -43,6 +43,7 @@ export default {
             contentBase: ['lib', 'examples'],
             host: 'localhost',
             port: 10001,
-        })
+        }),
+        livereload()
     ]
 }
