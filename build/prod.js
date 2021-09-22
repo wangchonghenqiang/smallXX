@@ -4,8 +4,8 @@ const originPath = path.resolve(__dirname, '../src');
 const distPath = path.resolve(__dirname, '../lib');
 console.log(originPath, 'originPath')
 const dirs = fs.readdir(originPath, 'utf8', (err, file) => {
-    if(file.isDirectory) {
-
+    if (file.isDirectory) {
+        
     } else {
 
     }
