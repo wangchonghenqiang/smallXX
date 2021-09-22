@@ -4,19 +4,13 @@ import {nodeResolve} from '@rollup/plugin-node-resolve';
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import serve from 'rollup-plugin-serve';
-
-const extensions = [
-    '.js',
-    '.ts',
-    '.tsx'
-]
+import livereload from 'rollup-plugin-livereload'
 
 export default {
     input: "./src/index.tsx",
     output: {
         format: 'esm',
-        dir : './lib'
-        // dir : './lib'
+        file: './lib/index.js',
     },
     external: ['react', 'react-dom', 'classnames'],
     globals: {
@@ -31,9 +25,13 @@ export default {
     plugins: [
         typescript({
             tsconfig: path.resolve(__dirname, "tsconfig.json"),
-            extensions
+            extensions:[
+                '.js',
+                '.ts',
+                '.tsx'
+            ]
         }),
-        nodeResolve(extensions),
+        nodeResolve(),
         babel({ babelHelpers: 'bundled', exclude: "node_modules/**" }),
         commonjs(),
         serve({
@@ -43,6 +41,7 @@ export default {
             contentBase: ['lib', 'examples'],
             host: 'localhost',
             port: 10001,
-        })
+        }),
+        livereload({watch: 'src'})
     ]
 }

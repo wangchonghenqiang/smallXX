@@ -1,3 +1,2 @@
-import React from 'react';
-declare const Counter: React.FC;
-export { Counter };
+export { default as button1 } from './button';
+export { default as button2 } from './counter';
